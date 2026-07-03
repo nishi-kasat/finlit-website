@@ -590,10 +590,14 @@
           <p class="pay-label">Payment Details</p>
           <div class="pay-amount">₹2999/-<small>Inclusive of all taxes</small></div>
 
-          <button type="submit" class="btn btn-primary btn-block razorpay-link" style="margin-top:20px;">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
-            Proceed to Pay Securely
-          </button>
+          <div style="margin-top:20px;">
+            <script
+              src="https://checkout.razorpay.com/v1/payment-button.js"
+              data-payment_button_id="pl_T89B3l9pJiZaEV"
+              async>
+            </script>
+          </div>
+
           <p class="secure-note">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 6v6c0 5.2 3.8 9.6 9 11 5.2-1.4 9-5.8 9-11V6l-9-4Z"/></svg>
             100% Secure &middot; Instant Confirmation
@@ -838,14 +842,6 @@
       window.location.href = window.RAZORPAY_PAYMENT_LINK;
     });
   });
-
-  var bookForm = document.getElementById('bookForm');
-  if(bookForm){
-    bookForm.addEventListener('submit', function(e){
-      e.preventDefault();
-      window.location.href = window.RAZORPAY_PAYMENT_LINK;
-    });
-  }
 
   // Mobile menu toggle
   var menuToggle = document.getElementById('menuToggle');
