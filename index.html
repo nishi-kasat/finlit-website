@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Finance for Women</title>
+<title>Finlit — Your Financial Freedom Starts Now</title>
 <meta name="description" content="A one-day workshop helping women take control of their money, investments and financial future.">
 
 <!-- ===================== CONFIG ===================== -->
@@ -111,21 +111,21 @@
   .menu-toggle span::after{ position:absolute; top:6px; }
 
   /* ---------- Hero ---------- */
-  .hero{ position:relative; padding:56px 0 84px; overflow:hidden; }
-  .hero-blobs{ position:absolute; inset:0; z-index:0; pointer-events:none; }
+  .hero{ position:relative; padding:56px 0 84px; overflow:hidden; background:#EC1B63; }
+  .hero-blobs{ position:absolute; inset:0; z-index:0; pointer-events:none; display:none; }
   .hero-inner{ position:relative; z-index:2; display:grid; grid-template-columns:1.02fr 0.98fr; gap:48px; align-items:center; }
 
-  .hero-copy .kicker{ font-size:15px; font-weight:600; color:var(--pink); margin-bottom:5px; display:block; }
-  .hero-copy .kicker .script{ font-family:var(--font-script); font-size:22px; }
+  .hero-copy .kicker{ font-size:15px; font-weight:600; color:#FFFFFF; margin-bottom:0; display:block; line-height:1.1; }
+  .hero-copy .kicker .script{ font-family:var(--font-script); font-size:22px; line-height:1; }
   .hero-copy h1{
     font-family:var(--font-display); font-size:clamp(38px, 4.4vw, 58px);
-    line-height:1.03; font-weight:800; letter-spacing:-1px; color:var(--ink); margin-bottom:18px;
+    line-height:1.03; font-weight:800; letter-spacing:-1px; color:#FFFFFF; margin-bottom:18px;
   }
   .hero-copy h1 .accent{ color:var(--pink); }
-  .hero-sub{ font-size:16px; color:var(--ink-soft); font-weight:500; margin-bottom:34px; }
+  .hero-sub{ font-size:16px; color:#FFFFFF; font-weight:500; margin-bottom:34px; }
 
   .focus-row{ display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-bottom:26px; }
-  .focus-item{ display:flex; flex-direction:column; align-items:center; text-align:center; gap:10px; padding:6px; }
+  .focus-item{ display:flex; flex-direction:column; align-items:center; text-align:center; gap:10px; padding:6px; color:#FFFFFF; }
   .focus-icon{
     width:52px; height:52px; border-radius:16px; background:var(--blush-1);
     display:flex; align-items:center; justify-content:center; color:var(--pink-dark);
@@ -148,10 +148,10 @@
   .info-bar-cta .seats-note{ font-size:11.5px; color:var(--ink-soft); font-weight:600; margin-top:6px; }
 
   .hero-visual{ position:relative; display:flex; align-items:center; justify-content:center; min-height:520px; }
-  .hero-visual .blob-bg{ position:absolute; inset:0; z-index:1; }
-  .hero-visual .blob-bg svg{ width:100%; height:100%; }
+  .hero-visual .blob-bg{ position:absolute; inset:0; z-index:1; display:none; }
+  .hero-visual .blob-bg svg{ width:100%; height:100%; display:none; }
   .hero-photo{
-    position:relative; z-index:2; width:88%; max-width:460px;
+    position:relative; z-index:2; width:110%; max-width:550px;
     filter:drop-shadow(0 30px 40px rgba(158,20,80,0.28));
   }
 
@@ -383,7 +383,7 @@
   <div class="container hero-inner">
     <div class="hero-copy">
       <span class="kicker">Because Financial Independence is <span class="script">Self Care</span></span>
-      <h1>YOUR<br><span class="accent">FINANCIAL FREEDOM</span><br>STARTS NOW</h1>
+      <h1>YOUR<br>FINANCIAL FREEDOM</span><br>STARTS NOW</h1>
       <p class="hero-sub">Women and money : The confidence they never taught us</p>
 
       <div class="focus-row">
@@ -738,7 +738,7 @@
 </div>
 
 <!-- ===================== FINAL CTA ===================== -->
-<section class="section" style="padding-top:5px;">
+<section class="section" style="padding: top 5px;">
   <div class="final-cta">
     <h2>Take the First Step Towards<br>Financial Freedom</h2>
     <p>Join our exclusive workshop and begin your journey towards financial confidence.</p>
