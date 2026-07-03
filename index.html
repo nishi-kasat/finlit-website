@@ -573,18 +573,20 @@
       <!-- ============ BOOKING FORM (visual only — redirects to Razorpay, does not process payment) ============ -->
       <div class="book-card" id="book">
         <h3>Book Your Seat</h3>
-        <form id="bookForm">
+        <form>
+
           <p class="pay-label">Payment Details</p>
-          <div class="pay-amount">₹2999/-<small>Inclusive of all taxes</small></div>
-          <div style="margin: 5px 0;">
-            <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_T89B3l9pJiZaEV" async>
-            </script> 
+
+          <div class="pay-amount">
+            ₹2999/-
+            <small>Inclusive of all taxes</small>
           </div>
 
-          <p class="secure-note">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 6v6c0 5.2 3.8 9.6 9 11 5.2-1.4 9-5.8 9-11V6l-9-4Z"/></svg>
-            100% Secure &middot; Instant Confirmation
-          </p>
+          <script
+            src="https://checkout.razorpay.com/v1/payment-button.js"
+            data-payment_button_id="pl_T89B3l9pJiZaEV"
+            async>
+          </script>
         </form>
       </div>
     </div>
