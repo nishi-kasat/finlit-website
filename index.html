@@ -164,7 +164,7 @@
 
   /* ---------- Why section ---------- */
   .why{ background:var(--blush-1); }
-  .why-grid{ display:grid; grid-template-columns:0.72fr 1.1fr 0.85fr; gap:36px; align-items:start; }
+  .why-grid{ display:grid; grid-template-columns:0.72fr 1.1fr 0.85fr; gap:36px; align-items:center; }
   .why-copy h2{ font-family:var(--font-display); font-weight:800; font-size:34px; margin:14px 0 16px; line-height:1.1; }
   .why-copy h2 .black{ color:var(--ink); }
   .why-copy p{ font-size:14.5px; color:var(--ink-soft); line-height:1.7; margin-bottom:8px; }
@@ -172,9 +172,9 @@
   .why-illustration{ margin-top:30px; }
   .why-illustration svg{ width:100%; max-width:280px; }
 
-  .why-points{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; }
+  .why-points{ display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:14px; }
   .point-card{
-    background:var(--white); border-radius:var(--radius-md); padding:24px 16px;
+    background:var(--white); border-radius:var(--radius-md); padding:20px 16px;
     text-align:center; box-shadow:var(--shadow-card); transition:transform .25s ease, box-shadow .25s ease;
   }
   .point-card:hover{ transform:translateY(-5px); box-shadow:var(--shadow-soft); }
@@ -187,12 +187,12 @@
 
   /* ---------- Booking form sidebar ---------- */
   .book-card{
-    background:var(--white); border-radius:var(--radius-lg); padding:30px 26px;
+    background:var(--white); border-radius:var(--radius-lg); padding:20px 20px; text-align:center;
     box-shadow:var(--shadow-soft); border:1px solid var(--blush-2);
   }
   .book-card h3{
     font-family:var(--font-display); font-weight:800; font-size:15px; letter-spacing:1px;
-    color:var(--pink-dark); text-align:center; margin-bottom:22px; text-transform:uppercase;
+    color:var(--pink-dark); text-align:center; margin-bottom:15px; text-transform:uppercase;
   }
   .field{ position:relative; margin-bottom:14px; }
   .field svg{ position:absolute; left:16px; top:50%; transform:translateY(-50%); color:var(--pink-dark); opacity:0.7; }
@@ -576,7 +576,7 @@
         <form id="bookForm">
           <p class="pay-label">Payment Details</p>
           <div class="pay-amount">₹2999/-<small>Inclusive of all taxes</small></div>
-          <div style="margin-top:20px;">
+          <div style="margin: 5px 0;">
             <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_T89B3l9pJiZaEV" async>
             </script> 
           </div>
