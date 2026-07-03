@@ -259,30 +259,6 @@
   }
   .trust-item p{ font-size:14px; font-weight:700; line-height:1.3; }
 
-  /* ---------- Testimonials ---------- */
-  .testi-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; margin-bottom:32px; }
-  .testi-card{
-    background:var(--white); border:1px solid var(--blush-2); border-radius:var(--radius-lg);
-    padding:30px 26px; box-shadow:var(--shadow-card);
-  }
-  .quote-mark{ color:var(--blush-3); font-family:var(--font-display); font-size:38px; font-weight:800; line-height:1; margin-bottom:6px; }
-  .testi-card p.testi-text{ font-size:14.5px; color:var(--ink-soft); line-height:1.7; margin-bottom:20px; min-height:75px; }
-  .testi-person{ display:flex; align-items:center; gap:12px; }
-  .avatar{
-    width:44px; height:44px; border-radius:50%; flex-shrink:0;
-    background:linear-gradient(135deg, var(--pink), var(--pink-dark));
-    color:#fff; display:flex; align-items:center; justify-content:center;
-    font-family:var(--font-display); font-weight:700; font-size:15px;
-  }
-  .testi-person h5{ font-size:14px; font-weight:700; }
-  .testi-person span{ font-size:12px; color:var(--ink-soft); }
-
-  .testi-nav{ display:flex; justify-content:center; gap:10px; }
-  .testi-nav button{
-    width:38px; height:38px; border-radius:50%; background:var(--blush-1); color:var(--pink-dark);
-    display:flex; align-items:center; justify-content:center; transition:background .2s ease, color .2s ease;
-  }
-  .testi-nav button:hover{ background:var(--pink); color:#fff; }
 
 
 
@@ -385,7 +361,6 @@
       <a href="#why">About Workshop</a>
       <a href="#learn">What You'll Learn</a>
       <a href="#audience">Who Should Attend</a>
-      <a href="#testimonials">Testimonials</a>
     </nav>
 
     <div class="nav-cta">
@@ -762,47 +737,6 @@
   </div>
 </div>
 
-<!-- ===================== TESTIMONIALS ===================== -->
-<section class="section" id="testimonials">
-  <div class="container">
-    <div class="section-head">
-      <h2>What Women Are Saying</h2>
-    </div>
-
-    <div class="testi-grid">
-      <div class="testi-card">
-        <div class="quote-mark">&ldquo;</div>
-        <p class="testi-text">This workshop changed the way I look at money. I finally feel confident about my financial future!</p>
-        <div class="testi-person">
-          <div class="avatar">PS</div>
-          <div><h5>Priya S.</h5><span>Working Professional, Mumbai</span></div>
-        </div>
-      </div>
-      <div class="testi-card">
-        <div class="quote-mark">&ldquo;</div>
-        <p class="testi-text">Simple, practical and easy to understand. Every woman should attend this!</p>
-        <div class="testi-person">
-          <div class="avatar">NR</div>
-          <div><h5>Neha R.</h5><span>Homemaker, Mumbai</span></div>
-        </div>
-      </div>
-      <div class="testi-card">
-        <div class="quote-mark">&ldquo;</div>
-        <p class="testi-text">The investment session was eye opening. Now I know how to grow my money wisely.</p>
-        <div class="testi-person">
-          <div class="avatar">AM</div>
-          <div><h5>Aarti M.</h5><span>Entrepreneur, Mumbai</span></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="testi-nav">
-      <button aria-label="Previous"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
-      <button aria-label="Next"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
-    </div>
-  </div>
-</section>
-
 <!-- ===================== FINAL CTA ===================== -->
 <section class="section" style="padding-top:0;">
   <div class="final-cta">
@@ -930,18 +864,8 @@
     });
   });
 
-  // Testimonial arrows
-  var testiCards = document.querySelectorAll('.testi-card');
-  var testiIndex = 0;
-  document.querySelectorAll('.testi-nav button').forEach(function(btn, i){
-    btn.addEventListener('click', function(){
-      testiIndex = i === 0 ? (testiIndex - 1 + testiCards.length) % testiCards.length : (testiIndex + 1) % testiCards.length;
-      testiCards[testiIndex].scrollIntoView({ behavior:'smooth', block:'nearest', inline:'center' });
-    });
-  });
-
   // Scroll-reveal
-  var revealEls = document.querySelectorAll('.card, .point-card, .audience-item, .focus-item, .testi-card');
+  var revealEls = document.querySelectorAll('.card, .point-card, .audience-item, .focus-item');
   var io = new IntersectionObserver(function(entries){
     entries.forEach(function(entry){
       if(entry.isIntersecting){
