@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Finlit — Your Financial Freedom Starts Now</title>
+<title>Finance for Women</title>
 <meta name="description" content="A one-day workshop helping women take control of their money, investments and financial future.">
 
 <!-- ===================== CONFIG ===================== -->
@@ -819,7 +819,6 @@
 
 <script>
   // Redirect every "Book Your Seat" / "Proceed to Pay" trigger to the Razorpay payment link.
-  // Note: the booking form collects name/email/phone visually to match the design,
   // but no payment is processed on this page — it only redirects to Razorpay.
   document.querySelectorAll('.razorpay-link').forEach(function(el){
     el.addEventListener('click', function(e){
@@ -834,15 +833,6 @@
   menuToggle.addEventListener('click', function(){ navLinks.classList.toggle('open'); });
   navLinks.querySelectorAll('a').forEach(function(a){
     a.addEventListener('click', function(){ navLinks.classList.remove('open'); });
-  });
-
-  // FAQ accordion
-  document.querySelectorAll('.faq-item').forEach(function(item){
-    item.querySelector('.faq-q').addEventListener('click', function(){
-      var wasOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('open'); });
-      if(!wasOpen) item.classList.add('open');
-    });
   });
 
   // Scroll-reveal
